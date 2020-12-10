@@ -133,6 +133,7 @@ section 2 styling */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 50vh;
   z-index: 1;
 }
 .featured-img-container {
@@ -527,13 +528,13 @@ border-top: 1px solid white;
     content: "";
     position: absolute;
     z-index: -1;
-    bottom: 47%;
-    left: -6%;
+    bottom: 40%;
+    left: -15%;
     /* margin-left: -150px; */
     /* background-image: url("./images/dot\ group.svg"); */
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background: #e971dd64;
   }
   img {
