@@ -582,14 +582,14 @@ section 2 styling */
     padding: 8px;
     cursor: pointer;
   }
-  .about-img-container {
+  /* .about-img-container {
     width: unset;
     width: 418px;
     height: 360px;
     background: #220f4a;
     border-radius: 10px;
   
-  }
+  } */
   .about-img{
     width: 200px;
     width: unset;
