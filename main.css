@@ -11,7 +11,8 @@ body {
   /* background: linear-gradient(180deg, #220f4a 0%, rgba(73, 42, 139, 0.78) 100%); */
 }
 .app-container {
-  background: linear-gradient(180deg, #220f4a 0%, rgba(73, 42, 139, 0.78) 100%);
+  /* background: linear-gradient(180deg, #220f4a 0%, rgba(73, 42, 139, 0.78) 100%); */
+  background: #220f4a;
 }
 li {
   list-style: none;
