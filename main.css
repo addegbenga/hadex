@@ -256,7 +256,8 @@ section 2 styling */
 
 .about-section-container {
   height: 50vh;
-  background: url("./images/bg-svg-mobile.svg");
+  /* background: url("./images/bg-svg-mobile.svg"); */
+  background: #220f4a;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 90%;
@@ -297,7 +298,8 @@ section 2 styling */
 
 .footer-container {
   height: 8vh;
-  background: #220f4ae4;
+background: #220f4a;
+border-top: 1px solid white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -596,7 +598,7 @@ section 2 styling */
     width: 410px;
     height: 350px;
     object-fit: cover;
-
+box-shadow: 5px 3px 5px 3px rgba(0, 0, 0, 0.331);
 }
 .abt-pointer-img{
     width: 100px;
