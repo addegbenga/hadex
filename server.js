@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: animateSkill,
+    pinSpacing:false,
     start: "-200 100%",
     end: "+=300",
     scrub: 1,
@@ -63,7 +64,8 @@ tl2
 tl.from(animateIntro, {
   opacity: 0,
   duration: 1,
-  x: 50,
+//   x: 50,
+  y: 50,
   stagger: 1,
 }).from(animateSkill, {
   opacity: 0,
@@ -76,6 +78,7 @@ const tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: projectheader,
     start: "-200 100%",
+    pinSpacing:false,
     end: "+=300",
     scrub: 1,
     ease: "Power4.easeIn",
@@ -92,13 +95,15 @@ tl3
   .from(projectparagraph, {
     duration: 1,
     opacity: 0,
-    x: 100,
+    // x: 100,
+    y: 100,
   });
 
 const tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: projects,
     start: "-100 100%",
+    pinSpacing:false,
     end: "+=300",
     scrub: 1,
     ease: "Power4.easeIn",
@@ -116,6 +121,7 @@ const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: testimonial,
     start: "-100 100%",
+    pinSpacing:false,
     end: "+=",
     scrub: 1,
     ease: Power4.easeIN,
@@ -132,6 +138,7 @@ const tl6 = gsap.timeline({
     trigger: animatecontact,
     start: "-100 100%",
     end: "+=",
+    pinSpacing:false,
     scrub: 1,
     ease: Power4.easeIn,
   },
