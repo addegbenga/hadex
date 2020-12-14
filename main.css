@@ -49,6 +49,8 @@ p {
 }
 header {
   display: flex;
+  background-color: #292929;
+  background-color: rgba(0, 0, 0, 0.164);
 }
 
 .nav-logo {
@@ -61,12 +63,13 @@ header {
   margin-left: 2rem;
 }
 nav {
-  padding-top: 20px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 97%;
   margin: auto;
+ 
 }
 
 .icon-link {
