@@ -592,6 +592,9 @@ footer{
 .project-brief-paragraph{
   width: 60%;
 }
+.project-brief{
+  height: 70vh;
+}
 
   .project-banner{
     padding: 0.5rem;
@@ -767,16 +770,23 @@ margin-bottom: 2rem;
   .icon-link-container {
     padding: 20px;
   }
-
+.project-brief{
+  padding-top: 4rem;
+}
   .intro-project-container{
     /* background-color: rgba(0, 0, 0, 0.92); */
     background-color: black;
+  }
+  .intro-project-container{
+    height: 100vh;
+    overflow-y: scroll;
+    
   }
   .featured-project-container {
     background: unset;
     width: 80%;
     padding-top: 0;
-    height: 70vh;
+    height: 100vh;
     justify-content: space-around;
   
   }
