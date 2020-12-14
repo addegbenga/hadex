@@ -573,6 +573,13 @@ footer{
     width: 100%;
     /* height: 85vh; */
     /* overflow: hidden; */
+    height: 90vh;
+  }
+  .intro-project-container{
+    height: 90vh;
+  }
+  .intro-project-section{
+    width: 80%;
   }
   .featured-content {
     text-align: unset;
@@ -580,8 +587,9 @@ footer{
   }
  
   .intro-container {
-    width: 70%;
+    width: 60%;
     margin-top: 1rem;
+    margin-left: 1rem;
   }
 
   
@@ -594,6 +602,7 @@ footer{
 }
 .project-brief{
   height: 70vh;
+padding-top: 4rem;
 }
 
   .project-banner{
