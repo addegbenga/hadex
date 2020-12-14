@@ -241,6 +241,8 @@ section 2 styling */
 /* start of project section to style****************************************************** */
 .project-container{
   background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-banner{
@@ -264,7 +266,7 @@ section 2 styling */
   position: unset;
 }
 .project-brief{
-  height: 50vh;
+  height: 70vh;
   background-color:rgba(0, 0, 0, 0.64);
   display: flex;
   flex-direction: column;
@@ -272,6 +274,7 @@ section 2 styling */
   align-items: center;
   /* padding: 20px; */
   color: white;
+  padding-bottom: 20rem;
 }
 .project-paragraph{
   text-align: center;
@@ -297,6 +300,7 @@ section 2 styling */
   /* flex-direction: column; */
  width: 90%;
   flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
   margin-top: -5rem;
 }
