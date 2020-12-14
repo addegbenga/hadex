@@ -48,17 +48,17 @@ tl2
       amount: 1,
     },
   });
-const display = new gsap.timeline();
-display.from(herosvg, {
-  opacity: 0,
-  scale:0.2,
-  duration: 1,
-  y: -50,
-  rotation: 360,
-});
-scrollbar.addEventListener("click", () => {
-    display.restart()
-});
+// const display = new gsap.timeline();
+// display.from(herosvg, {
+//   opacity: 0,
+//   scale:0.2,
+//   duration: 1,
+//   y: -50,
+//   rotation: 360,
+// });
+// scrollbar.addEventListener("click", () => {
+//     display.restart()
+// });
 
 tl.from(animateIntro, {
   opacity: 0,
