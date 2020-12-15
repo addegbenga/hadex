@@ -19,8 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: animateSkill,
-    pinSpacing:false,
-    start: "-200 100%",
+    pinSpacing: false,
+    start: "-300 100%",
     end: "+=300",
     scrub: 1,
     ease: "Power4.easeIn",
@@ -39,7 +39,6 @@ const tl = gsap.timeline({
 // );
 const tl2 = gsap.timeline();
 tl2
-  
   .from(heroanimate, {
     opacity: 0,
     duration: 3,
@@ -48,23 +47,43 @@ tl2
     stagger: {
       amount: 1,
     },
-  });
-const display = new gsap.timeline();
-display.from(herosvg, {
-  opacity: 0,
-  scale:0.2,
-  duration: 1,
-  y: -50,
-  rotation: 360,
-});
-scrollbar.addEventListener("click", () => {
-    display.restart()
-});
+  })
+  .from(
+    herosvg,
+    {
+      opacity: 0,
+      scale: 0.2,
+      duration: 2,
+      ease:Power3.easeIn,
+      onComplete: () => {
+        scrollbar.addEventListener("click", (e) => {
+          // display.restart();
+         startAnimation()
+        });
+      },
+      y: -50,
+      rotation: 360,
+    },
+    "-= 0.1"
+  );
+
+const startAnimation = () => {
+  const display = new gsap.timeline();
+  display.from(herosvg, {
+    opacity: 0,
+    scale: 0.2,
+    duration: 3,
+    ease:Power3.easeIn,
+    y: -50,
+    rotation: 360,
+  }, "-= .5");
+  display.restart();
+};
 
 tl.from(animateIntro, {
   opacity: 0,
   duration: 1,
-//   x: 50,
+  //   x: 50,
   y: 50,
   stagger: 1,
 }).from(animateSkill, {
@@ -78,7 +97,7 @@ const tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: projectheader,
     start: "-200 100%",
-    pinSpacing:false,
+    pinSpacing: false,
     end: "+=300",
     scrub: 1,
     ease: "Power4.easeIn",
@@ -103,7 +122,7 @@ const tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: projects,
     start: "-100 100%",
-    pinSpacing:false,
+    pinSpacing: false,
     end: "+=300",
     scrub: 1,
     ease: "Power4.easeIn",
@@ -121,7 +140,7 @@ const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: testimonial,
     start: "-100 100%",
-    pinSpacing:false,
+    pinSpacing: false,
     end: "+=",
     scrub: 1,
     ease: Power4.easeIN,
@@ -138,7 +157,7 @@ const tl6 = gsap.timeline({
     trigger: animatecontact,
     start: "-100 100%",
     end: "+=",
-    pinSpacing:false,
+    pinSpacing: false,
     scrub: 1,
     ease: Power4.easeIn,
   },
