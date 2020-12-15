@@ -4,28 +4,63 @@ const animateSkill = document.querySelector(".animate-skill");
 const animateIntro = document.querySelector(".animate-intro");
 const herosvg = document.querySelector(".round-bg-svg");
 const heroanimate = document.querySelectorAll(".hero-animate");
-const animateproject = document.querySelectorAll(".animate-project");
+const projectbanner = document.querySelectorAll(".project-banner");
 const projects = document.querySelector(".animate-project");
-const project = document.querySelector(".project-container");
+const project = document.querySelector(".intro-project-container");
 const projectheader = document.querySelector(".animate-project-brief-header");
 const animatecontact = document.querySelector(".animate-contact");
 const projectparagraph = document.querySelector(
   ".animate-project-brief-paragraph"
 );
+const navbar = document.querySelector(".header");
+const animatenav = document.querySelector(".animate-nav");
 const testimonial = document.querySelector(".animate-testimonial");
 const red = document.querySelector(".one");
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
+gsap.to(navbar, {
   scrollTrigger: {
-    trigger: animateSkill,
-    pinSpacing: false,
-    start: "-300 100%",
-    end: "+=300",
-    scrub: 1,
-    ease: "Power4.easeIn",
-    // markers: true,
+    trigger: document.body,
+    start: "top 5px",
+    scrub: true,
   },
+  css: {
+    background: "#131313",
+  },
+});
+
+const tl = gsap.timeline({
+  // scrollTrigger: {
+  //   trigger: animateIntro,
+  //   start: "top center",
+  //   end: "top 100px",
+  //   scroller:project,
+  //   pinSpacing: false,
+  //   // end: "+=300",
+  //   markers:true,
+  //   scrub: 1,
+  //   ease: "Power4.easeIn",
+  // },
+});
+tl.from(animateIntro, {
+  opacity: 0,
+  duration: 1,
+  xPercent: 30,
+  // y: 50,
+  stagger: 1,
+}).from(animateSkill, {
+  opacity: 0,
+  duration: 1.5,
+  xPercent: -30,
+  stagger: 1,
+});
+
+ScrollTrigger.create({
+  animation: tl,
+  trigger: project,
+  start:"top bottom",
+  end:"top 100px",
+  scrub: 1,
 });
 
 // tl.from(
@@ -54,11 +89,10 @@ tl2
       opacity: 0,
       scale: 0.2,
       duration: 2,
-      ease:Power3.easeIn,
+      ease: Power3.easeIn,
       onComplete: () => {
         scrollbar.addEventListener("click", (e) => {
-          // display.restart();
-         startAnimation()
+          startAnimation();
         });
       },
       y: -50,
@@ -69,34 +103,25 @@ tl2
 
 const startAnimation = () => {
   const display = new gsap.timeline();
-  display.from(herosvg, {
-    opacity: 0,
-    scale: 0.2,
-    duration: 3,
-    ease:Power3.easeIn,
-    y: -50,
-    rotation: 360,
-  }, "-= .5");
+  display.from(
+    herosvg,
+    {
+      opacity: 0,
+      scale: 0.2,
+      duration: 3,
+      ease: Power3.easeIn,
+      y: -50,
+      rotation: 360,
+    },
+    "-= .5"
+  );
   display.restart();
 };
-
-tl.from(animateIntro, {
-  opacity: 0,
-  duration: 1,
-  //   x: 50,
-  y: 50,
-  stagger: 1,
-}).from(animateSkill, {
-  opacity: 0,
-  duration: 1,
-  y: 100,
-  stagger: 1,
-});
 
 const tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: projectheader,
-    start: "-200 100%",
+    start: "-500 50%",
     pinSpacing: false,
     end: "+=300",
     scrub: 1,
@@ -117,25 +142,23 @@ tl3
     // x: 100,
     y: 100,
   });
-
-const tl4 = gsap.timeline({
+let sections = gsap.utils.toArray(projectbanner);
+gsap.from(sections, {
   scrollTrigger: {
     trigger: projects,
-    start: "-100 100%",
-    pinSpacing: false,
-    end: "+=300",
+    start: "top center",
+    end: "top 400px",
     scrub: 1,
-    ease: "Power4.easeIn",
-    // markers: true,
+    ease: "Power3.easeIn",
+  },
+  duration: 2,
+  opacity: 0,
+  yPercent: 50,
+  stagger: {
+    amount: 1,
   },
 });
 
-tl4.from(projects, {
-  duration: 3,
-  opacity: 0,
-  y: 90,
-  stagger: 1,
-});
 const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: testimonial,
@@ -152,18 +175,18 @@ tl5.from(testimonial, {
   y: 100,
 });
 
-const tl6 = gsap.timeline({
-  scrollTrigger: {
-    trigger: animatecontact,
-    start: "-100 100%",
-    end: "+=",
-    pinSpacing: false,
-    scrub: 1,
-    ease: Power4.easeIn,
-  },
-});
-tl6.from(animatecontact, {
-  duration: 1,
-  opacity: 0,
-  x: -100,
-});
+// const tl6 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: animatecontact,
+//     start: "-100 100%",
+//     end: "+=",
+//     pinSpacing: false,
+//     scrub: 1,
+//     ease: Power4.easeIn,
+//   },
+// });
+// tl6.from(animatecontact, {
+//   duration: 1,
+//   opacity: 0,
+//   x: -100,
+// });
